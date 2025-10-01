@@ -1,51 +1,39 @@
-// Menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const mainNav = document.getElementById('main-nav');
-menuToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('open');
+feather.replace();
+
+// Initialize Vanta.js effect
+VANTA.GLOBE({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: "#6366f1",
+    backgroundColor: "#f8fafc",
+    size: 1.00
 });
 
-// Active menu
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', function() {
-    document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
-    this.classList.add('active');
-    mainNav.classList.remove('open');
-  });
+// Smooth scrolling for anchor links
+// (If you want to keep this, ensure anchor targets exist)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 });
 
-// Scroll reveal
-const revealElements = document.querySelectorAll('section, .project-item, .sharing-item, .product-item');
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-  revealElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < windowHeight - 100) {
-      el.classList.add('visible');
-    }
-  });
+// Mobile menu toggle (if you have a mobile menu)
+const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+const mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('hidden');
+    });
 }
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-
-// Header shrink
-const header = document.querySelector('header.main-header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('shrink');
-  } else {
-    header.classList.remove('shrink');
-  }
-});
-
-// Ripple effect for buttons
-document.querySelectorAll('.btn-primary').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    let ripple = document.createElement("span");
-    ripple.classList.add("ripple");
-    ripple.style.left = (e.clientX - this.getBoundingClientRect().left) + "px";
-    ripple.style.top = (e.clientY - this.getBoundingClientRect().top) + "px";
-    this.appendChild(ripple);
-    setTimeout(() => ripple.remove(), 600);
-  });
-});
