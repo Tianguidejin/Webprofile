@@ -11,22 +11,22 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold gradient-text">DSV</span>
+    <nav class="navbar">
+    <div class="container">
+            <div class="nav-flex">
+                <div class="logo-flex">
+                    <span class="text-2xl font-bold gtxt">DSV</span>
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#projects" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                    <div class="nav-links">
+                        <a href="#home" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Trang chủ</a>
+                        <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Giới thiệu</a>
+                        <a href="#projects" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dự án</a>
                         <a href="#blog" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                        <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Liên hệ</a>
                     </div>
                 </div>
-                <div class="-mr-2 flex md:hidden">
+                <div class="nav-mobile">
                     <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-indigo-600 focus:outline-none">
                         <i data-feather="menu"></i>
                     </button>
@@ -38,35 +38,35 @@
     <!-- Hero Section -->
     <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
         <div id="vanta-bg" class="absolute inset-0"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="container rel z10">
             <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                        <span class="block">Hello, I'm</span>
-                        <span class="block gradient-text">Your Name</span>
+                <div class="hero-col">
+                    <h1 class="hero-title">
+                        <span class="block">Xin chào, tôi là</span>
+                        <span class="block gtxt">Tên của bạn</span>
                     </h1>
-                    <p class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                        Creative Designer & Developer building digital experiences that matter.
+                    <p class="hero-desc">
+                        Nhà thiết kế & lập trình viên sáng tạo, xây dựng trải nghiệm số ý nghĩa.
                     </p>
-                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                            <div class="rounded-md shadow">
+                    <div class="hero-cta">
+                        <div class="hero-cta-flex">
+                            <div class="cta-btn">
                                 <a href="#contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                                    Get in touch
+                                    Liên hệ ngay
                                 </a>
                             </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                            <div class="cta-btn-alt">
                                 <a href="#projects" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
-                                    View work
+                                    Xem dự án
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-                        <div class="floating">
-                            <img class="w-full rounded-lg" src="http://static.photos/technology/640x360/42" alt="Profile">
+                <div class="hero-img-wrap">
+                    <div class="hero-img-inner">
+                        <div class="flt">
+                            <img class="w-full rounded-lg" src="/images/tient.png" alt="Profile">
                         </div>
                     </div>
                 </div>
@@ -75,15 +75,15 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="section bgw">
+    <div class="container">
             <div class="lg:text-center">
-                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">About</h2>
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Giới thiệu</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    A little about me
+                    Đôi nét về tôi
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-                    Passionate about creating digital experiences that make an impact.
+                    Đam mê sáng tạo trải nghiệm số mang lại giá trị thực tế.
                 </p>
             </div>
 
@@ -93,9 +93,9 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                             <i data-feather="user"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Who am I?</p>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Tôi là ai?</p>
                         <p class="mt-2 ml-16 text-base text-gray-600">
-                            I'm a multidisciplinary designer and developer with a passion for creating beautiful, functional digital experiences. With 5+ years in the industry, I've worked with startups and established brands alike.
+                            Tôi là nhà thiết kế và lập trình viên đa lĩnh vực, đam mê sáng tạo sản phẩm số đẹp mắt, tiện ích. Hơn 5 năm kinh nghiệm hợp tác cùng startup và thương hiệu lớn.
                         </p>
                     </div>
 
@@ -103,9 +103,9 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                             <i data-feather="award"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">My skills</p>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Kỹ năng</p>
                         <p class="mt-2 ml-16 text-base text-gray-600">
-                            UI/UX Design, Frontend Development, Brand Identity, Motion Design, and more. I'm constantly learning and expanding my skill set to stay at the forefront of digital design.
+                            Thiết kế UI/UX, lập trình frontend, nhận diện thương hiệu, motion design... Luôn học hỏi và cập nhật xu hướng mới.
                         </p>
                     </div>
 
@@ -113,9 +113,9 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                             <i data-feather="compass"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">My approach</p>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Phương châm</p>
                         <p class="mt-2 ml-16 text-base text-gray-600">
-                            I believe in a user-centered design approach, combining aesthetics with functionality to create solutions that not only look great but solve real problems.
+                            Lấy người dùng làm trung tâm, kết hợp thẩm mỹ và chức năng để tạo ra giải pháp thực tiễn.
                         </p>
                     </div>
 
@@ -123,9 +123,9 @@
                         <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                             <i data-feather="heart"></i>
                         </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">My passions</p>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Sở thích</p>
                         <p class="mt-2 ml-16 text-base text-gray-600">
-                            Beyond design, I'm passionate about photography, travel, and the outdoors. These interests often influence my creative work and perspective.
+                            Ngoài thiết kế, tôi yêu thích nhiếp ảnh, du lịch và khám phá thiên nhiên. Những điều này truyền cảm hứng cho sáng tạo của tôi.
                         </p>
                     </div>
                 </div>
@@ -134,8 +134,8 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" class="section bgg">
+    <div class="container">
             <div class="lg:text-center">
                 <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Work</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -148,7 +148,7 @@
 
             <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Project 1 -->
-                <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="chv bg-white rounded-lg overflow-hidden shadow-md">
                     <div class="h-48 overflow-hidden">
                         <img class="w-full h-full object-cover" src="http://static.photos/technology/640x360/1" alt="Project 1">
                     </div>
@@ -170,7 +170,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="chv bg-white rounded-lg overflow-hidden shadow-md">
                     <div class="h-48 overflow-hidden">
                         <img class="w-full h-full object-cover" src="http://static.photos/technology/640x360/2" alt="Project 2">
                     </div>
@@ -192,7 +192,7 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="chv bg-white rounded-lg overflow-hidden shadow-md">
                     <div class="h-48 overflow-hidden">
                         <img class="w-full h-full object-cover" src="http://static.photos/technology/640x360/3" alt="Project 3">
                     </div>
@@ -224,8 +224,8 @@
     </section>
 
     <!-- Blog Section -->
-    <section id="blog" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="blog" class="section bgw">
+    <div class="container">
             <div class="lg:text-center">
                 <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Blog</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -238,7 +238,7 @@
 
             <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Blog Post 1 -->
-                <div class="card-hover flex flex-col rounded-lg shadow-md overflow-hidden">
+                <div class="chv flex flex-col rounded-lg shadow-md overflow-hidden">
                     <div class="flex-shrink-0">
                         <img class="h-48 w-full object-cover" src="http://static.photos/technology/640x360/4" alt="Blog post 1">
                     </div>
@@ -275,7 +275,7 @@
                 </div>
 
                 <!-- Blog Post 2 -->
-                <div class="card-hover flex flex-col rounded-lg shadow-md overflow-hidden">
+                <div class="chv flex flex-col rounded-lg shadow-md overflow-hidden">
                     <div class="flex-shrink-0">
                         <img class="h-48 w-full object-cover" src="http://static.photos/technology/640x360/5" alt="Blog post 2">
                     </div>
@@ -312,7 +312,7 @@
                 </div>
 
                 <!-- Blog Post 3 -->
-                <div class="card-hover flex flex-col rounded-lg shadow-md overflow-hidden">
+                <div class="chv flex flex-col rounded-lg shadow-md overflow-hidden">
                     <div class="flex-shrink-0">
                         <img class="h-48 w-full object-cover" src="http://static.photos/technology/640x360/6" alt="Blog post 3">
                     </div>
@@ -359,8 +359,8 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-indigo-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" class="section bgi">
+    <div class="container">
             <div class="lg:text-center">
                 <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -461,8 +461,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white">
-        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+    <footer class="bgw">
+    <div class="container py12 ofh">
             <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                 <div class="px-5 py-2">
                     <a href="#home" class="text-base text-gray-500 hover:text-gray-900">Home</a>
