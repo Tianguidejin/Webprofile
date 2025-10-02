@@ -11,30 +11,43 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="navbar">
-    <div class="container">
-            <div class="nav-flex">
-                <div class="logo-flex">
-                    <span class="text-2xl font-bold gtxt">NVT</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="nav-links">
-                        <a href="#home" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Trang chủ</a>
-                        <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Giới thiệu</a>
-                        <a href="#projects" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dự án</a>
-                        <a href="#blog" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                        <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Liên hệ</a>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-flex">
+                    <div class="logo-flex">
+                        <span class="text-2xl font-bold gtxt">NVT</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="nav-links">
+                            <a href="#home" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Trang chủ</a>
+                            <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Giới thiệu</a>
+                            <a href="#projects" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Dự án</a>
+                            <a href="#blog" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                            <a href="#contact" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Liên hệ</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden nav-mobile">
+                        <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-indigo-600 focus:outline-none">
+                            <i data-feather="menu"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="nav-mobile">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-indigo-600 focus:outline-none">
-                        <i data-feather="menu"></i>
+            </div>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="fixed inset-0 z-50 bg-black bg-opacity-40 hidden">
+                <div class="absolute top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col">
+                    <button id="close-mobile-menu" class="self-end mb-6 text-gray-700 hover:text-indigo-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                     </button>
+                    <a href="#home" class="block py-2 px-4 text-gray-900 hover:text-indigo-600 rounded">Trang chủ</a>
+                    <a href="#about" class="block py-2 px-4 text-gray-900 hover:text-indigo-600 rounded">Giới thiệu</a>
+                    <a href="#projects" class="block py-2 px-4 text-gray-900 hover:text-indigo-600 rounded">Dự án</a>
+                    <a href="#blog" class="block py-2 px-4 text-gray-900 hover:text-indigo-600 rounded">Blog</a>
+                    <a href="#contact" class="block py-2 px-4 text-gray-900 hover:text-indigo-600 rounded">Liên hệ</a>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <!-- Hero Section -->
     <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
@@ -505,5 +518,24 @@
     </footer>
 
     <script src="script.js"></script>
+</body>
+<script>
+// Mobile menu toggle
+const menuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-mobile-menu');
+if(menuBtn && mobileMenu && closeBtn) {
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+    // Đóng menu khi click ra ngoài bảng menu
+    mobileMenu.addEventListener('click', (e) => {
+        if(e.target === mobileMenu) mobileMenu.classList.add('hidden');
+    });
+}
+</script>
 </body>
 </html>
